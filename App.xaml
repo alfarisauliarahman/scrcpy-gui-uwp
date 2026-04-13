@@ -1,0 +1,22 @@
+<Application x:Class="ScrcpyGui.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:local="clr-namespace:ScrcpyGui"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Converters -->
+            <local:BoolToVisibilityConverter x:Key="BoolToVisConverter" />
+            <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisConverter" />
+            <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <local:BoolToRefreshTextConverter x:Key="BoolToRefreshText" />
+            <local:CountToVisibilityConverter x:Key="CountToVisConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
